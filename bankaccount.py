@@ -10,8 +10,10 @@ class User:
         print (self.balance)
     def dep(self,amount):
         self.balance += amount
-    def trans(self,amount)
-      self.amount
+    def trans(self,amount,user)
+        self.balance += amount 
+        user.balance -= amount
+        print("transfer complete")
 
 userone =User(500)
 userone.dep(33)
@@ -29,6 +31,7 @@ usertoo.display_user_balance()
 
 userthree=User(1000)
 userthree.dep(200)
+userthree.trans(33,userone)
 userthree.make_withdrawal(1)
 userthree.make_withdrawal(1)
 userthree.make_withdrawal(1)
