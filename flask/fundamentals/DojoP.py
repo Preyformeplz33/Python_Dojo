@@ -1,10 +1,10 @@
 class Ninja:
-     def __init__(first_name ,last_name,treats,pet_food,pet):
+     def __init__(self,first_name ,last_name,pet_food,pet):
           self.first_name = first_name#Recca
           self.last_name= last_name#Hanabishi
-          self.treats = Candy #Ramune
+          self.treats = Ramune #Ramune
           self.pet_food = pet_food #Chips
-          self.pet = Pet(name="",type="",tricks="")
+          self.pet = Pet
 
 # walk() - walks the ninja's pet involing the pet play() method
      def walk(self):
@@ -24,7 +24,7 @@ def bathe(self):
 
 
 class pet:
-     def __init__(name,type,triks):
+     def __init__(self,name,type,triks):
           self.name= name
           self.type = type
           self.triks = 333
@@ -41,7 +41,7 @@ class pet:
      def sound(self):
           print('Ya!Ya!Ya')
 
-userone = Ninja("Recca","Hanabishi","Ramune","Chips")
+userone = Ninja("Recca","Hanabishi","Chips")
 Nine=pet("Nine","em","hide")
 
 Recca.walk()
