@@ -33,5 +33,8 @@ def say(create):
 def repeat(time,peat):
     return f"{time*peat}"
 
+@app.errorhandler(404)
+def Nf(e):
+    return f'"Sorry! No response. Try again'
 if __name__=="__main__": # Ensure this file is being run directly and not from a different module
-    app.run(debug=True)  # run the app in debug mode.
+    app.run(debug=True)  # run the app in debug mode.s
