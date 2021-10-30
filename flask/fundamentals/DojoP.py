@@ -41,8 +41,8 @@ class pet:
      def sound(self):
           print('Ya!Ya!Ya')
 
-userone = Ninja("Recca","Hanabishi","Chips")
-Nine=pet("Nine","em","hide")
+userone = Ninja("Recca","Hanabishi","Chips",Nine)
+Nine=pet("Nine","Raven","hide")
 
 Recca.walk()
 
