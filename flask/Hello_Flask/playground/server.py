@@ -11,6 +11,10 @@ def index():
 def play():
     return render_template("index00.html")
 
+@app.route('/play/<int:num>')
+def playtoo(x):
+    return render_template("index00.html",num=num)
+
 
 @app.route('/success')
 def success():
@@ -38,6 +42,29 @@ def say(create):
 @app.route('/repeat/<int:time>/<string:peat>')
 def repeat(time,peat):
     return f"{time*peat}"
+
+@app.route('/lists')
+def render_lists():
+    # Soon enough, we'll get data from a database, but for now, we're hard coding data
+    student_info = [
+        {'name' : 'Michael', 'age' : 35},
+        {'name' : 'John', 'age' : 30 },
+        {'name' : 'Mark', 'age' : 25},
+        {'name' : 'KB', 'age' : 27}
+    ]
+    return render_template("lists.html", random_numbers = [3,1,5], students = student_info)
+
+
+@app.route('/users')
+def user_list():
+    users = [
+        {'first_name' : 'Michael', 'last_name' : 'Choi'},
+        {'first_name' : 'John', 'last_name' : 'Supsupin'},
+        {'first_name' : 'Mark', 'last_name' : 'Guillen'},
+        {'first_name' : 'KB', 'last_name' : 'Tonel'}
+]
+    return render_template('users.html',users=users)
+
 
 @app.errorhandler(404)
 def Nf(e):
